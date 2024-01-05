@@ -31,7 +31,7 @@ class Tetris {
     bool rotate, gameover, sendData;
     float timercount, delay;
     int gameSock;
-
+    std::string nameLogin;
 protected:
     void events();
     void draw();
@@ -44,7 +44,7 @@ protected:
     std::function<void(int)> gameOverCallback;
 
 public:
-    Tetris(int socket);
+    Tetris(int socket, std::string name);
     ~Tetris();
     void run();
     void setGameOverCallback(std::function<void(int)> callback);

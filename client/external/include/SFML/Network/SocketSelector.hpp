@@ -200,7 +200,7 @@ private:
 /// \code
 /// // Create a socket to listen to new connections
 /// sf::TcpListener listener;
-/// listener.listen(5002);
+/// listener.listen(55002);
 ///
 /// // Create a list to store the future clients
 /// std::list<sf::TcpSocket*> clients;

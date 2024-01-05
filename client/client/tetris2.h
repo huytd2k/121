@@ -30,7 +30,7 @@ class Tetris2 {
     int dirx, color, score;
     bool rotate, gameover, sendResult;
     float timercount, delay;
-    
+    std::string nameLog;
 
 protected:
     void events();
@@ -45,7 +45,7 @@ protected:
 
 public:
     std::vector<std::vector<std::uint32_t>> areaEnermy;
-    Tetris2(int socket, std::string name);
+    Tetris2(int socket, std::string name,std::string nameLog);
     ~Tetris2();
     void run();
     void setGameOverCallback(std::function<void(int)> callback);

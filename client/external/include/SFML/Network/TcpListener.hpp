@@ -148,9 +148,9 @@ public:
 /// Usage example:
 /// \code
 /// // Create a listener socket and make it wait for new
-/// // connections on port 5002
+/// // connections on port 55002
 /// sf::TcpListener listener;
-/// listener.listen(5002);
+/// listener.listen(55002);
 ///
 /// // Endless loop that waits for new connections
 /// while (running)

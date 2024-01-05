@@ -252,13 +252,13 @@ private:
 /// \code
 /// // ----- The client -----
 ///
-/// // Create a socket and bind it to the port 5002
+/// // Create a socket and bind it to the port 55002
 /// sf::UdpSocket socket;
-/// socket.bind(5002);
+/// socket.bind(55002);
 ///
-/// // Send a message to 192.168.1.50 on port 5002
+/// // Send a message to 192.168.1.50 on port 55002
 /// std::string message = "Hi, I am " + sf::IpAddress::getLocalAddress().toString();
-/// socket.send(message.c_str(), message.size() + 1, "192.168.1.50", 5002);
+/// socket.send(message.c_str(), message.size() + 1, "192.168.1.50", 55002);
 ///
 /// // Receive an answer (most likely from 192.168.1.50, but could be anyone else)
 /// char buffer[1024];
@@ -270,9 +270,9 @@ private:
 ///
 /// // ----- The server -----
 ///
-/// // Create a socket and bind it to the port 5002
+/// // Create a socket and bind it to the port 55002
 /// sf::UdpSocket socket;
-/// socket.bind(5002);
+/// socket.bind(55002);
 ///
 /// // Receive a message from anyone
 /// char buffer[1024];

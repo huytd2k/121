@@ -13,13 +13,13 @@ Tetris2::~Tetris2() {
     // ...
 }
 sf::RectangleShape divider;
-Tetris2::Tetris2(int socket, std::string name) {
+Tetris2::Tetris2(int socket, std::string name, std::string nameLogin) {
 
     gameSocket = socket;
     roomName = name;
     sendResult = false;
+    nameLog = nameLogin;
     
-
     areaEnermy.resize(lines);
     for (std::size_t i{}; i < areaEnermy.size(); ++i) {
         areaEnermy[i].resize(cols);
@@ -206,7 +206,7 @@ void Tetris2::draw() {
         if (!sendResult) {
             sendResult = true;
             std::string inter = "SCORE";
-            std::string message = inter + "||" + std::to_string(score) + "||" + roomName;
+            std::string message = inter + "||" + std::to_string(score) + "||" + roomName + "||" + nameLog;;
             std::cout << score << "--" << roomName << "\n";
             sendWrapper(gameSocket, message.c_str(), message.size(), 0);
             char buffer[1024];
@@ -233,7 +233,7 @@ void Tetris2::draw() {
                     else if (messInfo1 == "C") {
                         textResult.setString("Winner\nPartner is disconncted");
                         textResult.setFillColor(sf::Color::Blue);
-                        textResult.setCharacterSize(20);
+                        textResult.setCharacterSize(25);
                         
                     }
                 }

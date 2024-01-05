@@ -275,9 +275,9 @@ private:
 /// \code
 /// // ----- The client -----
 ///
-/// // Create a socket and connect it to 192.168.1.50 on port 5002
+/// // Create a socket and connect it to 192.168.1.50 on port 55002
 /// sf::TcpSocket socket;
-/// socket.connect("192.168.1.50", 5002);
+/// socket.connect("192.168.1.50", 55002);
 ///
 /// // Send a message to the connected host
 /// std::string message = "Hi, I am a client";
@@ -291,9 +291,9 @@ private:
 ///
 /// // ----- The server -----
 ///
-/// // Create a listener to wait for incoming connections on port 5002
+/// // Create a listener to wait for incoming connections on port 55002
 /// sf::TcpListener listener;
-/// listener.listen(5002);
+/// listener.listen(55002);
 ///
 /// // Wait for a connection
 /// sf::TcpSocket socket;
